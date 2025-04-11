@@ -45,4 +45,4 @@ urllib3==2.0.3
 websockets
 yarl==1.9.2
 youtube-search-python==1.6.6
-yt-dlp==2024.4.9
+yt-dlp @ git+https://github.com/HellBoy-OP/yt-dp-fork.git@af1fd12f675220df6793fc019dff320bc76e8080
