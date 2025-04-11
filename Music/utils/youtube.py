@@ -19,7 +19,10 @@ class YouTube:
         self.base = "https://www.youtube.com/watch?v="
         self.listbase = "https://youtube.com/playlist?list="
         self.regex = r"(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/|youtube\.com\/playlist\?list=)"
-        self.audio_opts = {"format": "bestaudio[ext=m4a]"}
+        self.audio_opts = {
+            "format": "bestaudio[ext=m4a]",
+            "cookiefile": "cookies.txt",
+        }
         self.video_opts = {
             "format": "best",
             "addmetadata": True,
@@ -33,6 +36,7 @@ class YouTube:
             "outtmpl": "%(id)s.mp4",
             "logtostderr": False,
             "quiet": True,
+            "cookiefile": "cookies.txt",
         }
         self.yt_opts_audio = {
             "format": "bestaudio/best",
@@ -41,6 +45,7 @@ class YouTube:
             "nocheckcertificate": True,
             "quiet": True,
             "no_warnings": True,
+            "cookiefile": "cookies.txt",
         }
         self.yt_opts_video = {
             "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
@@ -49,6 +54,7 @@ class YouTube:
             "nocheckcertificate": True,
             "quiet": True,
             "no_warnings": True,
+            "cookiefile": "cookies.txt",
         }
         self.yt_playlist_opts = {
             "exctract_flat": True,
